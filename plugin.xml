@@ -30,18 +30,27 @@
     <!-- ios -->
     <platform name="ios">
         
-        
-        <config-file target="*-Info.plist" parent="com.apple.security.network.server">
-
-          <true />
-
+        <!-- Add HotspotConfiguration & NetworkExtension Capabilities  -->
+        <config-file parent="com.apple.developer.networking.HotspotConfiguration" target="*-Info.plist" mode="add">
+            <true/>
         </config-file>
-
-        <config-file target="*-Info.plist" parent="com.apple.security.network.client">
-
-            <true />
-
-            </config-file>
+        <config-file parent="com.apple.developer.networking.HotspotConfiguration" target="*-Info.plist" mode="add">
+                 <true/>
+        </config-file>
+        <config-file parent="com.apple.developer.networking.networkextension" target="*-Info.plist" mode="add">
+                <array/>
+        </config-file>
+        <config-file parent="com.apple.developer.networking.networkextension" target="*-Info.plist" mode="add">
+                <array/>
+        </config-file>
+	<config-file parent="com.apple.developer.networking.wifi-info" target="**-Info.plist" mode="add">
+                <true/>
+        </config-file>
+        <config-file parent="com.apple.developer.networking.wifi-info" target="*-Info.plist" mode="add">
+                <true/>
+        </config-file>
+        
+      
         <!-- iOS9 whitelisting -->
         <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
             <array>

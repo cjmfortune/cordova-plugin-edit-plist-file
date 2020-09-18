@@ -30,6 +30,18 @@
     <!-- ios -->
     <platform name="ios">
         
+        
+        <config-file target="*-Info.plist" parent="com.apple.security.network.server">
+
+          <true />
+
+        </config-file>
+
+        <config-file target="*-Info.plist" parent="com.apple.security.network.client">
+
+            <true />
+
+            </config-file>
         <!-- iOS9 whitelisting -->
         <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
             <array>

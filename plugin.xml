@@ -30,7 +30,11 @@
     <!-- ios -->
     <platform name="ios">
         
-       
+       <config-file target="*-Info.plist" parent="/*">
+            <feature name="NetworkStatus">
+                <param name="ios-package" value="CDVConnection" />
+            </feature>
+        </config-file>
         
       
         <!-- iOS9 whitelisting -->
